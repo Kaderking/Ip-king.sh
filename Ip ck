@@ -1,0 +1,12 @@
+#!/bin/bash
+read -p " enter 3 octed of Ip :" ip
+for ((Ad=1;AD<256;AD++)) {
+MMM=$(ping -c 1 $ip .$AD  | grep -o  "bytes fro>
+if  [ "$MMM" == "bytes from" ];
+
+then
+ echo "$ip.$AD IP UP "
+else
+echo "$ip.$AD IP DOEN "
+fi
+}
